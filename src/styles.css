@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Alata;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s;
+}
+
+body.dark {
+  color: white;
+  background-color: #212529;
+}
+
+#container{
+  max-height: 300px;
+  margin-bottom: 30px;
+}
+
+#icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 30px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+
+#icon:hover{
+  background-color: rgba(100, 100, 100, 0.699);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #3a86ff;
+}
+
+#form input{
+  width: 270px;
+  height: 20px;
+  border: none;
+  outline: none;
+  background: none;
+  color: rgb(117, 117, 117);
+  border-bottom: 1px solid rgb(94, 92, 92);
+}
+
+button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: rgba(169, 169, 169, 0.849);
+}
+
+button:hover {
+  background-color: royalblue;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+#todo-list {
+  margin: 10px 0;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 3px;
+}
+
+.todo:hover {
+  text-decoration: line-through;
+  background-color: #ee6c4d;
+  color: white;
+  cursor: pointer;
+}
+
+#empty-msg {
+  margin-top: 20px;
+}
+
+footer{
+  margin: 20px;
+}
+
+footer a{
+  color: #3a86ff;
+}
+
+@media (max-width: 400px) {
+  #empty-msg {
+    font-size: 20px;
+  }
+
+  form input {
+    width: 200px;
+  }
+}
