@@ -29,9 +29,15 @@ export default class App extends React.Component {
 
   // Method to add todo in state
   addTodo(todo) {
+    let newList;
     if (todo.content === "") return;
     todo.id = Math.random(); //Generating a random id for a todo
-    let newList = [...this.state.todoList, todo]; // Creating new todoList by adding new todo in addition to previous ones.
+    if (this.state.todoList !== null){
+      newList = [...this.state.todoList, todo]; // Creating new todoList by adding new todo in addition to previous ones.
+      this.setState({ todoList: newList });
+      return
+    }
+    newList = [todo];
     this.setState({ todoList: newList });
   }
 
